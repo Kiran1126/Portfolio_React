@@ -49,7 +49,7 @@ function Blog () {
                     <span className="hover:underline">{temp.title}</span>
                   </div>
                 </NavLink>
-                <span className="material-symbols-outlined bg-yellow-500 p-2 rounded-full opacity-0 group-hover:opacity-100 group-hover:-translate-y-32 -translate-x-28">
+                <span className="material-symbols-outlined bg-yellow-500 p-2 rounded-full opacity-0 group-hover:opacity-95 group-hover:-translate-y-32 -translate-x-28">
                   {temp.icon}
                 </span>
               </div>         
