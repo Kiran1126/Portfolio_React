@@ -25,7 +25,10 @@ const Contact = () => {
             <input type="text" name="subject" className="h-14 w-full rounded-md px-5 bg-slate-800 text-slate-200 focus:outline-blue-500" placeholder="Subject"/>
             <textarea type="text" name="message" className="h-40 p-5 w-full rounded-md px-5 bg-slate-800 text-slate-200 focus:outline-blue-500" placeholder="Message"/>
             <BtnContainer>
-              Send Message
+              <p className="text-lg mr-1">Send</p> 
+              <span class="material-symbols-outlined">
+                send
+              </span>
             </BtnContainer>
           </div>
         </form>

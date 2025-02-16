@@ -46,7 +46,7 @@ function App() {
     {
       link: 'Blog',
       icon: 'edit_note',
-      url: '/Blog'
+      url: '/Blogs'
     },
     {
       link: 'Contact',
@@ -125,6 +125,12 @@ function App() {
           path="/Testimonial"
           element={
             <Testimonial />
+          }
+        />
+        <Route 
+          path="/Blogs"
+          element={
+            <Blog />
           }
         />
         <Route 
