@@ -80,73 +80,75 @@ function App() {
   ];
 
   return  (
-    <Router>
-      <Sidebar links={linksArr} />
-      <Routes>
-        <Route
-          path="/"
-          element={
-            <>
+    <div className="overflow-x-hidden">
+      <Router>
+        <Sidebar links={linksArr} />
+        <Routes>
+          <Route
+            path="/"
+            element={
+              <>
+                <Banner icons={socialLinks} />
+                <About />
+                <Services />
+                <Experience />
+                <Testimonial />
+                <Blog />
+                <Contact />
+              </>
+            }
+          />
+          <Route 
+            path="/Home"
+            element={
               <Banner icons={socialLinks} />
+            }
+          />
+          <Route 
+            path="/About"
+            element={
               <About />
+            }
+          />
+          <Route 
+            path="/Services"
+            element={
               <Services />
+            }
+          />
+          <Route 
+            path="/Experience"
+            element={
               <Experience />
+            }
+          />
+          <Route 
+            path="/Testimonial"
+            element={
               <Testimonial />
+            }
+          />
+          <Route 
+            path="/Blogs"
+            element={
               <Blog />
+            }
+          />
+          <Route 
+            path="/Contact"
+            element={
               <Contact />
-            </>
-          }
-        />
-        <Route 
-          path="/Home"
-          element={
-            <Banner icons={socialLinks} />
-          }
-        />
-        <Route 
-          path="/About"
-          element={
-            <About />
-          }
-        />
-        <Route 
-          path="/Services"
-          element={
-            <Services />
-          }
-        />
-        <Route 
-          path="/Experience"
-          element={
-            <Experience />
-          }
-        />
-        <Route 
-          path="/Testimonial"
-          element={
-            <Testimonial />
-          }
-        />
-        <Route 
-          path="/Blogs"
-          element={
-            <Blog />
-          }
-        />
-        <Route 
-          path="/Contact"
-          element={
-            <Contact />
-          }
-        />
-        <Route 
-          path="*" 
-          element={
-            <h1 className="text-center text-black">404 - Page Not Found</h1>
-          } 
-        />
-      </Routes>
-    </Router>
+            }
+          />
+          <Route 
+            path="*" 
+            element={
+              <h1 className="text-center text-black">404 - Page Not Found</h1>
+            } 
+          />
+        </Routes>
+      </Router>
+    </div>
   );
 };
 

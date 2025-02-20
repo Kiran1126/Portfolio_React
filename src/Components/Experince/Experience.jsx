@@ -1,6 +1,5 @@
 import Heading from "../Heading/Heading";
 import ExperienceContainer from "../Container/ExperienceContainer";
-import { NavLink } from "react-router-dom";
 
 // Array of objects for education details
 const academicsArr = [

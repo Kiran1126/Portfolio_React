@@ -5,6 +5,7 @@ import BlogArtwork_2 from "../../assets/Blog/Blog2.jpg";
 import BlogArtwork_3 from "../../assets/Blog/Blog3.jpg";
 import BtnContainer from "../Container/BtnContainer";
 import ShowMore from "./ShowMore";
+import { AnimatedOnScroll } from "react-animated-css-onscroll";
 
 // Array of objects for the blog details
 const blogArr = [
@@ -84,15 +85,23 @@ function Blog() {
         theme="text-black"
         borderColor="border-blue-500"
       />
-      <ul className="flex justify-evenly flex-wrap">{renderBlogs("initial")}</ul>
-      <ul className={`${showMore ? "flex justify-evenly flex-wrap" : "hidden"}`}>
-        {renderBlogs("additional")}
-      </ul>
-      <div className="flex justify-center">
-        <BtnContainer onClick={() => setShowMore(!showMore)}>
-          {showMore ? "Show Less" : "Show More"}
-        </BtnContainer>
-      </div>
+      <AnimatedOnScroll animationIn="fadeInUpBig">
+        <div className="flex flex-col gap-5">
+          <ul className="flex justify-evenly items-stretch flex-wrap">
+            {renderBlogs("initial")}
+          </ul>
+          <ul className={`${showMore ? "flex justify-evenly flex-wrap relative" : "hidden absolute"}`}>
+            {renderBlogs("additional")}
+          </ul>
+        </div>
+      </AnimatedOnScroll>
+      <AnimatedOnScroll animationIn="fadeInUpBig">
+        <div className="flex justify-center">
+          <BtnContainer onClick={() => setShowMore(!showMore)}>
+            {showMore ? "Show Less" : "Show More"}
+          </BtnContainer>
+        </div>
+      </AnimatedOnScroll>
     </section>
   );
 }
