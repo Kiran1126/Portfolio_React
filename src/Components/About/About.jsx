@@ -63,7 +63,7 @@ import CountUp from 'react-countup';
     <ScrollAnimation animateIn="fadeInUp" animateOnce>
       <section className="flex items-start justify-evenly">
         <img src="https://bolby-react.vercel.app/images/avatar-2.svg" alt="icon" />
-        <div className="h-0 w-0 border-t-[13px] border-r-[20px] border-b-[13px] border-solid border-t-transparent border-b-transparent border-l-[#474646] absolute right-[69.35%] mt-10" />
+        <div className="h-0 w-0 border-t-[13px] border-r-[20px] border-b-[13px] border-solid border-t-transparent border-b-transparent border-l-[#474646] absolute right-[69.35%] mt-11" />
         <div className="h-auto max-w-[60%] rounded-lg flex items-center justify-center shadow-[rgba(0,_0,_0,_0.24)_0px_3px_8px] gap-3 p-9">
           <AboutText />
           <ProgressSection />

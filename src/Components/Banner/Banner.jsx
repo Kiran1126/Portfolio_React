@@ -1,10 +1,10 @@
-import React from "react";
+import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
 import BtnContainer from "../Container/BtnContainer";
 import SocialLinks from "./SocialLinks";
 import Typewriter from 'typewriter-effect';
 import useSound from 'use-sound';
-import Music from "../../assets/Music.mp3";
+import Music from "../../assets/Music/Music.mp3";
 
 const Banner = ({ icons }) => {
   return (
@@ -59,13 +59,34 @@ const BannerText = () => (
 
 // Sound effect
 const SoundBtn = () => {
-  const [play] = useSound(Music, {volume: 0.5, interrupt: true});
+
+  const [play, { pause }] = useSound(Music);
+  const [isPlaying, setIsPlaying] = useState(false);
+  const handleOnClick = () => {
+    {
+      if(isPlaying){
+        pause();
+      }
+      else{  
+        play();
+      }
+    }
+    setIsPlaying(!isPlaying);
+  };
+
   return (
-    <button onClick={play}>
-      <span className="material-symbols-outlined text-slate-50 text-3xl cursor-pointer">
-        play_arrow
-      </span>
-    </button>
+    <div className="flex w-full h-full justify-end mt-5 mr-10">
+      <div className={`bg-slate-600 text-slate-50 opacity-80 z-10 rounded-lg max-h-20 w-auto p-4 grid place-content-center 
+        ${isPlaying ? "" : "animate-pulse"}
+      `}>
+        <p className="font-semibold">Click here!</p>
+        <button onClick={handleOnClick} className="mt-1">
+          <span className="material-symbols-outlined text-3xl cursor-pointer">
+            {isPlaying ? "pause" : "play_arrow"}
+          </span>
+        </button>
+      </div>
+    </div>
   );
 };
 

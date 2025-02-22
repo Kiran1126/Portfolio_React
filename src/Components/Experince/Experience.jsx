@@ -1,6 +1,8 @@
 import Heading from "../Heading/Heading";
 import ExperienceContainer from "../Container/ExperienceContainer";
 import ScrollAnimation from "react-animate-on-scroll";
+import Sound from '../../assets/Music/HoverSound.mp3'
+import useSound from "use-sound";
 
 // Array of objects for education details
 const academicsArr = [
@@ -41,6 +43,9 @@ const experienceArr = [
 ];
 
 const Experience = () => {
+
+  const [play, { stop }] = useSound(Sound);
+
   return (
     <section className="h-screen w-4/5 float-right flex flex-col justify-evenly">
       <Heading faded="experience" bold="Summary" theme="text-black" borderColor="border-blue-500"/>
@@ -49,7 +54,10 @@ const Experience = () => {
           <ExperienceContainer>
             {
               academicsArr.map((temp) => (
-                <div className="flex gap-5 p-5 group-hover:opacity-20 transition duration-300 hover:!opacity-100 hover:!scale-110">
+                <div className="flex gap-5 p-5 group-hover:opacity-20 transition duration-300 hover:!opacity-100 hover:!scale-110" 
+                  onMouseEnter={() => play()}
+                  onMouseLeave={() => stop()}
+                >
                   <span class="material-symbols-outlined text-red-400 text-3xl">
                     school
                   </span>
@@ -65,7 +73,10 @@ const Experience = () => {
           <ExperienceContainer>
             {
               experienceArr.map((temp) => (
-                <div className="flex gap-5 p-5 group-hover:opacity-20 transition duration-300 hover:!opacity-100 hover:!scale-110">
+                <div className="flex gap-5 p-5 group-hover:opacity-20 transition duration-300 hover:!opacity-100 hover:!scale-110" 
+                  onMouseEnter={() => play()}
+                  onMouseLeave={() => stop()}
+                >
                   <span class="material-symbols-outlined text-orange-500">
                     work
                   </span>

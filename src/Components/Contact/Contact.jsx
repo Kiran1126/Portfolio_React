@@ -49,13 +49,14 @@ const FormSection = () => (
 
 const BtnSection = () => {
   const [sentMsg, setSentMsg] = useState(false);
-
   return (
     <BtnContainer onClick={() => setSentMsg(!sentMsg)}>
       <p className="text-lg mr-1">
         {sentMsg ? "Message Sent" : "Send"}
       </p> 
-      <span className="material-symbols-outlined">send</span>
+      <span className="material-symbols-outlined">
+        {sentMsg ? "" : "send"}
+      </span>
     </BtnContainer>
   );
 };
