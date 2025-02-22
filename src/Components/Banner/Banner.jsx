@@ -3,10 +3,13 @@ import { NavLink } from "react-router-dom";
 import BtnContainer from "../Container/BtnContainer";
 import SocialLinks from "./SocialLinks";
 import Typewriter from 'typewriter-effect';
+import useSound from 'use-sound';
+import Music from "../../assets/Music.mp3";
 
 const Banner = ({ icons }) => {
   return (
     <div className="area flex flex-col justify-end items-center">
+      <SoundBtn />
       <Circles />
       <BannerImage />
       <BannerText />
@@ -53,6 +56,18 @@ const BannerText = () => (
     </div>
   </div>
 );
+
+// Sound effect
+const SoundBtn = () => {
+  const [play] = useSound(Music, {volume: 0.5, interrupt: true});
+  return (
+    <button onClick={play}>
+      <span className="material-symbols-outlined text-slate-50 text-3xl cursor-pointer">
+        play_arrow
+      </span>
+    </button>
+  );
+};
 
 const SocialLinksList = ({ icons }) => (
   <ul className="flex m-5">

@@ -1,19 +1,21 @@
 import React, { useState } from 'react';
 import Heading from "../Heading/Heading";
 import BtnContainer from "../Container/BtnContainer";
-import { AnimatedOnScroll } from "react-animated-css-onscroll";
+import ScrollAnimation from 'react-animate-on-scroll';
 
 const Contact = () => (
   <section className="bg-custom-dark h-screen w-4/5 float-right flex flex-col justify-evenly items-center overflow-hidden">
     <Heading faded="Contact" bold="Get In Touch" theme="text-white" borderColor="border-orange-500" />
-    <div className="flex flex-row gap-40">
-      <AnimatedOnScroll animationIn="bounceInLeft">
-        <Comment />
-      </AnimatedOnScroll>
-      <AnimatedOnScroll animationIn="bounceInRight">
-        <FormSection />
-      </AnimatedOnScroll>
-    </div>
+    <ScrollAnimation animateIn="fadeInUp" animateOnce>
+      <ul className='flex gap-x-40'>
+        <li>
+          <Comment />         
+        </li>
+        <li>
+          <FormSection />
+        </li>
+      </ul>
+    </ScrollAnimation>
   </section> 
 );
 
@@ -40,9 +42,7 @@ const FormSection = () => (
       </div>
       <input type="text" name="subject" className="h-14 w-full rounded-md px-5 bg-slate-800 text-slate-200 focus:outline-blue-500" placeholder="Subject" required />
       <textarea name="message" className="h-40 p-5 w-full rounded-md px-5 bg-slate-800 text-slate-200 focus:outline-blue-500" placeholder="Message" required />
-      <AnimatedOnScroll animationIn="fadeInUp">
-        <BtnSection />
-      </AnimatedOnScroll>
+      <BtnSection />
     </div>
   </form>
 );
@@ -51,7 +51,7 @@ const BtnSection = () => {
   const [sentMsg, setSentMsg] = useState(false);
 
   return (
-    <BtnContainer onClick={() => setSentMsg(true)}>
+    <BtnContainer onClick={() => setSentMsg(!sentMsg)}>
       <p className="text-lg mr-1">
         {sentMsg ? "Message Sent" : "Send"}
       </p> 
