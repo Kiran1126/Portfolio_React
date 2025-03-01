@@ -53,8 +53,8 @@ const Experience = () => {
         <div className="flex justify-center text-custom-dark">
           <ExperienceContainer>
             {
-              academicsArr.map((temp) => (
-                <div className="flex gap-5 p-5 group-hover:opacity-20 transition duration-300 hover:!opacity-100 hover:!scale-110" 
+              academicsArr.map((temp, index) => (
+                <div key={index} className="flex gap-5 p-5 group-hover:opacity-20 transition duration-300 hover:!opacity-100 hover:!scale-110" 
                   onMouseEnter={() => play()}
                   onMouseLeave={() => stop()}
                 >
@@ -72,8 +72,8 @@ const Experience = () => {
           </ExperienceContainer>
           <ExperienceContainer>
             {
-              experienceArr.map((temp) => (
-                <div className="flex gap-5 p-5 group-hover:opacity-20 transition duration-300 hover:!opacity-100 hover:!scale-110" 
+              experienceArr.map((temp, index) => (
+                <div key={index} className="flex gap-5 p-5 group-hover:opacity-20 transition duration-300 hover:!opacity-100 hover:!scale-110" 
                   onMouseEnter={() => play()}
                   onMouseLeave={() => stop()}
                 >

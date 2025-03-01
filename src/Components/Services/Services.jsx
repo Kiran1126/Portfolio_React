@@ -35,8 +35,8 @@ function Services () {
       <ScrollAnimation animateIn="fadeIn" duration={2} animateOnce>
         <div className="flex justify-evenly px-10 flex-wrap">
           {
-            containerArr.map((temp) => (
-              <TextContainer background={temp.theme} width="max-w-80" animation="transition duration-500 hover:-translate-y-6 delay-100">
+            containerArr.map((temp, index) => (
+              <TextContainer key={index} background={temp.theme} width="max-w-80" animation="transition duration-500 hover:-translate-y-6 delay-100">
                 <img className="h-20 w-20" src={temp.image} alt="icon" />
                 <h1 className={`${temp.txtColor} text-xl font-bold`}>{temp.heading}</h1>
                 <p className={`${temp.txtColor} text-center`}>{temp.text}</p>

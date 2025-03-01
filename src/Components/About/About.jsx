@@ -52,7 +52,7 @@ import CountUp from 'react-countup';
   ];
 
   const About = () => (
-    <div className="bg-white h-screen w-4/5 float-right flex flex-col justify-evenly">
+    <div className="bg-white h-screen w-screen md:w-4/5 float-right flex flex-col justify-evenly">
       <Heading faded="About Me" bold="Know Me More" theme="text-black" borderColor="border-blue-500" /> 
       <AboutSection />
       <ExperienceSection />

@@ -8,7 +8,7 @@ import Music from "../../assets/Music/Music.mp3";
 
 const Banner = ({ icons }) => {
   return (
-    <div className="area flex flex-col justify-end items-center">
+    <div className="area md:w-4/5 md:float-right flex flex-col items-center">
       <SoundBtn />
       <Circles />
       <BannerImage />
@@ -75,8 +75,8 @@ const SoundBtn = () => {
   };
 
   return (
-    <div className="flex w-full h-full justify-end mt-5 mr-10">
-      <div className={`bg-slate-600 text-slate-50 opacity-80 z-10 rounded-lg max-h-20 w-auto p-4 grid place-content-center 
+    <div className="flex w-full h-full justify-center md:justify-end mt-40 md:mt-5 md:mr-10">
+      <div className={`bg-slate-600 text-slate-50 opacity-80 z-10 rounded-lg max-h-20 w-auto py-4 px-10 md:p-4 grid place-content-center 
         ${isPlaying ? "" : "animate-pulse"}
       `}>
         <p className="font-semibold">Click here!</p>
@@ -92,9 +92,11 @@ const SoundBtn = () => {
 
 const SocialLinksList = ({ icons }) => (
   <ul className="flex m-5">
-    {icons.map((icon, index) => (
-      <SocialLinks key={index} urls={icon.url} networks={icon.network}></SocialLinks>
-    ))}
+    {
+      icons.map((icon, index) => (
+        <SocialLinks key={index} urls={icon.url} networks={icon.network}></SocialLinks>
+      ))
+    }
   </ul>
 );
 
