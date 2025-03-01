@@ -101,7 +101,15 @@ function App() {
           <Route
             path="/Home"
             element={
-              <Banner icons={socialLinks} />
+              <>
+                <Banner icons={socialLinks} />
+                <About />
+                <Services />
+                <Experience />
+                <Testimonial />
+                <Blog />
+                <Contact />
+              </>
             }
           />
           <Route 
