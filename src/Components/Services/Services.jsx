@@ -30,15 +30,15 @@ const containerArr = [
 
 function Services () {
   return (
-    <section className="w-4/5 h-screen bg-custom-dark float-right flex flex-col justify-evenly">
+    <section className="w-screen md:w-4/5 h-screen bg-custom-dark md:float-right flex flex-col justify-evenly">
       <Heading faded="services" bold="What I Do" theme="text-white" borderColor="border-orange-500"/>
       <ScrollAnimation animateIn="fadeIn" duration={2} animateOnce>
-        <div className="flex justify-evenly px-10 flex-wrap">
+        <div className="flex flex-col gap-3 md:gap-0 items-center md:items-stretch md:flex-row justify-center md:justify-evenly px-10 flex-wrap">
           {
             containerArr.map((temp, index) => (
               <TextContainer key={index} background={temp.theme} width="max-w-80" animation="transition duration-500 hover:-translate-y-6 delay-100">
-                <img className="h-20 w-20" src={temp.image} alt="icon" />
-                <h1 className={`${temp.txtColor} text-xl font-bold`}>{temp.heading}</h1>
+                <img className="max-h-20 max-w-20" src={temp.image} alt="icon" />
+                <h1 className={`${temp.txtColor} text-lg md:text-xl font-bold`}>{temp.heading}</h1>
                 <p className={`${temp.txtColor} text-center`}>{temp.text}</p>
               </TextContainer>
             ))
@@ -46,7 +46,7 @@ function Services () {
         </div>
       </ScrollAnimation>
       <ScrollAnimation animateIn="fadeInUp" animateOnce>
-        <p className="text-center text-slate-50 text-xl font-semibold">Looking for a custom job? 
+        <p className="text-center text-slate-50 text-lg md:text-xl font-semibold px-4 md:px-0">Looking for a custom job? 
           <span className="cursor-pointer m-2 text-orange-500 hover:underline" onClick={() => {
             window.location.href="/Contact"
           }}>

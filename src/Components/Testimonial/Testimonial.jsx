@@ -95,27 +95,27 @@ const settings = {
 
 function Testimonial () {
   return (
-    <section className="w-[80%] h-screen bg-custom-dark float-right overflow-x-hidden flex flex-col justify-evenly">
+    <section className="w-screen md:w-[80%] h-screen px-10 md:px-0 bg-custom-dark md:float-right overflow-x-hidden flex flex-col justify-evenly">
       <Heading faded="Testimonial" bold="What Others Say" theme="text-white" borderColor="border-orange-500"/>
-      <Slider {...settings} customPaging={(i) => (
+      <Slider {...settings} customPaging={() => (
         <div className="mt-5 w-2 h-2 bg-white rounded-full hover:bg-orange-500"></div>
       )}>
         {
           clientArr.map((temp, index) => (
           <TextContainer key={index}>
             <TextContainer background="bg-transparent" width="max-w-96" animation="transition-none">
-              <img className="max-h-32 max-w-32" src={temp.img} alt="client" />
-              <p className="text-slate-50 font-semibold text-2xl">{temp.client}</p>
-              <p className="text-slate-50 opacity-70">{temp.Prof}</p>
+              <img className="w-24 h-24 md:max-h-32 md:max-w-32" src={temp.img} alt="client" />
+              <p className="text-slate-50 font-semibold text-xl md:text-2xl">{temp.client}</p>
+              <p className="text-slate-50 opacity-70 text-sm md:text-base">{temp.Prof}</p>
             </TextContainer>
             <TextContainer background="bg-white" width="max-w-96" animation="transition-none">
-              <p className="text-black">{temp.comment}</p>
+              <p className="text-black text-sm md:text-base">{temp.comment}</p>
             </TextContainer>
           </TextContainer>
           ))
         }
       </Slider>
-      <div className="grid grid-cols-5 place-items-center gap-5 my-10 px-20 max-[768px]:grid-cols-2 aspect-ratio: 1 / 1">
+      <div className="grid grid-cols-5 place-items-center gap-3 md:gap-5 my-5 md:my-10 md:px-20 max-[768px]:grid-cols-2 aspect-ratio: 1 / 1">
         {
           techArr.map((temp, index) => (
             <img key={index} className="w-14 h-14 opacity-40" src={temp.img} alt={temp.alt} />

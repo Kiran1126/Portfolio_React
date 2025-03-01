@@ -4,7 +4,7 @@
 
 /* Code for scrolbar animation */
 
-@media (min-width: 768px){
+@media (min-width: 500px){
 	::-webkit-scrollbar{
 		width: 5px;
 		background-color: transparent;

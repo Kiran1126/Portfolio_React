@@ -5,7 +5,7 @@ import useSound from 'use-sound'
 
 const SocialLinks = ({urls, networks}) =>{
 
-  const [play, stop] = useSound(Sound);
+  const [play, { stop }] = useSound(Sound);
 
   return( 
     <li className='m-1' onMouseEnter={() => play()} onMouseLeave={() => stop()}>

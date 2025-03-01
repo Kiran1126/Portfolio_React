@@ -78,7 +78,7 @@ function Blog() {
       ));
 
   return (
-    <section className="w-[80%] h-screen bg-white float-right flex flex-col justify-around items-stretch overflow-hidden">
+    <section className="w-screen md:w-[80%] h-auto md:h-screen py-7 md:py-0 bg-white md:float-right flex flex-col justify-around items-stretch overflow-hidden">
       <Heading
         faded="Blogs"
         bold="What I Write"
@@ -86,8 +86,8 @@ function Blog() {
         borderColor="border-blue-500"
       />
       <ScrollAnimation animateIn="fadeInUp" animateOnce>
-        <div className="flex flex-col gap-5">
-          <ul className="flex justify-evenly items-stretch flex-wrap">
+        <div className="flex flex-col md:gap-5">
+          <ul className="flex flex-col md:flex-row justify-evenly items-center md:items-stretch flex-wrap">
             {renderBlogs("initial")}
           </ul>
           <ul className={`${showMore ? "flex justify-evenly flex-wrap relative" : "hidden absolute"}`}>
@@ -96,7 +96,7 @@ function Blog() {
         </div>
       </ScrollAnimation>
       <ScrollAnimation animateIn="fadeIn" animateOnce>
-        <div className="flex justify-center">
+        <div className="flex justify-center mt-7 md:mt-0">
           <BtnContainer onClick={() => setShowMore(!showMore)}>
             {showMore ? "Show Less" : "Show More"}
           </BtnContainer>

@@ -5,7 +5,6 @@ import Copyright from '../Branding/Copyright';
 import useSound from 'use-sound';
 import TapSound from '../../assets/Music/TapMusic.mp3';
 
-// Brand component should be defined before it is used
 const Brand = () => (
   <div className='flex md:items-baseline'>
     <h1 className='text-white text-3xl md:text-5xl font-semibold md:font-bold'>Kiran</h1>
@@ -28,7 +27,7 @@ const Sidebar = ({ links }) => {
         <ul className='flex flex-col justify-center'>
           {
             links.map((temp, index) => (
-              <li key={index} className="m-3 cursor-pointer" onMouseEnter={() => play()} onMouseLeave={() => stop}>
+              <li key={index} className="m-3 cursor-pointer" onMouseEnter={() => play()} onMouseLeave={() => stop()}>
                 <Links 
                   Link={temp.link} 
                   Icon={temp.icon} 
