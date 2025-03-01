@@ -98,7 +98,7 @@ function App() {
               </>
             }
           />
-          <Route 
+          <Route
             path="/Home"
             element={
               <Banner icons={socialLinks} />
