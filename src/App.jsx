@@ -85,7 +85,7 @@ function App() {
         <Sidebar links={linksArr} />
         <Routes>
           <Route
-            path="/"
+            path="/Home"
             element={
               <>
                 <Banner icons={socialLinks} />
@@ -96,12 +96,6 @@ function App() {
                 <Blog />
                 <Contact />
               </>
-            }
-          />
-          <Route 
-            path="/Home"
-            element={
-              <Banner icons={socialLinks} />
             }
           />
           <Route 
