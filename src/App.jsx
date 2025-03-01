@@ -8,6 +8,7 @@ import Experience from "./Components/Experince/Experience";
 import Testimonial from "./Components/Testimonial/Testimonial";
 import Contact from "./Components/Contact/Contact";
 import Blog from "./Components/Blog/Blog";
+import { Navigate } from "react-router-dom";
 
 function App() {
 
@@ -98,19 +99,11 @@ function App() {
               </>
             }
           />
-          <Route
-            path="/Home"
+          <Route 
+            path="/Home" 
             element={
-              <>
-                <Banner icons={socialLinks} />
-                <About />
-                <Services />
-                <Experience />
-                <Testimonial />
-                <Blog />
-                <Contact />
-              </>
-            }
+              <Navigate to="/" />
+            } 
           />
           <Route 
             path="/About"
