@@ -62,7 +62,7 @@ const Experience = () => {
                     school
                   </span>
                   <div>
-                    <p className="opacity-50 text-base md:text-xl uppercase">{temp.time}</p>
+                    <p className="opacity-50 text-lg md:text-xl uppercase">{temp.time}</p>
                     <p className="text-lg md:text-2xl font-semibold font-sans py-2">{temp.degree}</p>
                     <p className="text-base md:text-xl font-normal opacity-85">{temp.institute}</p>
                   </div>
@@ -81,7 +81,7 @@ const Experience = () => {
                     work
                   </span>
                   <div>
-                    <p className="text-base md:text-xl opacity-50 uppercase">{temp.time}</p>
+                    <p className="text-lg md:text-xl opacity-50 uppercase">{temp.time}</p>
                     <p className="text-lg md:text-2xl font-semibold font-sans py-2">{temp.domain}</p>
                     <p className="text-base md:text-xl font-normal opacity-85">{temp.company}</p>
                   </div>
@@ -91,7 +91,7 @@ const Experience = () => {
         </div>
       </ScrollAnimation>
       <ScrollAnimation animateIn="fadeInUp" animateOnce>
-        <p className="text-center text-custom-dark text-lg md:text-xl font-semibold px-4 md:px-0">Want to connect with me? 
+        <p className="text-center text-custom-dark text-base md:text-xl font-semibold px-7 md:px-0">Want to connect with me? 
           <span className="cursor-pointer m-2 text-orange-500 hover:underline" onClick={() => {
             window.open("https://www.linkedin.com/in/kiran-samanta-732604258/", "_blank");
           }}>

@@ -62,14 +62,14 @@ const About = () => (
 const AboutSection = () => (
   <ScrollAnimation animateIn="fadeInUp" animateOnce>
     <section className="flex flex-col md:flex-row items-center md:items-start justify-evenly gap-9 md:gap-0">
-      <img className="max-h-28 md:max-h-40 w-auto" src="https://bolby-react.vercel.app/images/avatar-2.svg" alt="icon" />
+      <img className="max-h-24 md:max-h-40 w-auto" src="https://bolby-react.vercel.app/images/avatar-2.svg" alt="icon" />
 
       {/* Arrow for desktop view */}
       <div className="hidden md:block h-0 w-0 border-t-[13px] border-r-[20px] border-b-[13px] border-solid border-t-transparent border-b-transparent border-l-[#474646] absolute right-[69.35%] mt-11" />
       {/* Arrow for mobile view */}
-      <div className="md:hidden h-0 w-0 border-l-[13px] border-r-[13px] border-b-[20px] border-solid border-r-transparent border-l-transparent border-l-[#474646] absolute top-32" />
+      <div className="md:hidden h-0 w-0 border-l-[13px] border-r-[13px] border-b-[20px] border-solid border-r-transparent border-l-transparent border-l-[#474646] absolute top-28" />
 
-      <div className="h-auto w-[95%] md:max-w-[60%] rounded-lg flex flex-col md:flex-row items-center justify-center shadow-[rgba(0,_0,_0,_0.24)_0px_3px_8px] gap-3 p-7 md:p-9">
+      <div className="h-auto w-[95%] md:max-w-[60%] rounded-lg flex flex-col md:flex-row items-center justify-center shadow-[rgba(0,_0,_0,_0.24)_0px_3px_8px] gap-3 p-5 md:p-9">
         <AboutText />
         <ProgressSection />
       </div>
@@ -79,7 +79,7 @@ const AboutSection = () => (
 
 const AboutText = () => (
   <div className="flex flex-col items-start w-full md:w-2/4 gap-7">
-    <p className="text-1xl font-medium font-sans opacity-70">I’m Kiran Samanta, a passionate and tech-driven student dedicated to transforming innovative ideas into reality.</p>
+    <p className="text-sm md:text-base font-medium font-sans opacity-70">I’m Kiran Samanta, a passionate and tech-driven student dedicated to transforming innovative ideas into reality.</p>
     <div className="hidden md:block">
       <BtnContainer>
         <button type="button" formTarget="_blank" onClick={() => window.open(Resume, '_blank', 'noopener,noreferrer')}>
@@ -96,10 +96,10 @@ const ProgressSection = () => (
       progressArr.map((temp, index) => (
         <React.Fragment key={index}>
           <div className="flex justify-between font-sans">
-            <label className="font-mono font-bold opacity-75">{temp.domain}</label>
-            <label className="font-mono font-bold opacity-75">{temp.progress}</label>
+            <label className="text-sm md:text-base font-mono font-bold opacity-75">{temp.domain}</label>
+            <label className="text-sm md:text-base font-mono font-bold opacity-75">{temp.progress}</label>
           </div>
-          <span className={`${temp.spanColor} ${temp.width} h-1.5 rounded-lg`} />
+          <span className={`${temp.spanColor} ${temp.width} h-1 rounded-lg`} />
         </React.Fragment>
       ))
     }
@@ -119,9 +119,9 @@ const ExperienceSection = () => (
       {
         experienceArr.map((temp, index) => (
           <div className="flex gap-4 justify-center" key={index}>
-            <span className="material-symbols-outlined text-3xl md:text-5xl opacity-20">{temp.icon}</span>
+            <span className="material-symbols-outlined text-2xl md:text-5xl opacity-20">{temp.icon}</span>
             <div className="block">
-              <p className="text-2xl md:text-4xl text-custom-dark font-bold">
+              <p className="text-xl md:text-4xl text-custom-dark font-bold">
                 <CountUp 
                   delay={3}
                   start={0}
@@ -129,7 +129,7 @@ const ExperienceSection = () => (
                   end={parseInt(temp.number, 10)}
                 />
               </p>
-              <p className="text-1xl text-custom-dark font-normal mt-1 opacity-85">{temp.content}</p>
+              <p className="text-xs md:text-base text-custom-dark font-normal mt-1 opacity-85">{temp.content}</p>
             </div>
           </div>
         ))

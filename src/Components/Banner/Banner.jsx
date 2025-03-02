@@ -8,7 +8,7 @@ import Music from "../../assets/Music/Music.mp3";
 
 const Banner = ({ icons }) => {
   return (
-    <div className="area md:w-4/5 md:float-right flex flex-col items-center">
+    <div className="area md:w-4/5 md:float-right flex flex-col justify-start items-center">
       <SoundBtn />
       <Circles />
       <BannerImage />
@@ -43,8 +43,8 @@ const BannerImage = () => (
 
 const BannerText = () => (
   <div className="block">
-    <p className="text-4xl text-white font-bold my-3 text-center">Kiran Samanta</p>
-    <div className="text-2xl text-yellow-500 flex justify-center">
+    <p className="text-3xl md:text-4xl text-white font-bold my-3 text-center">Kiran Samanta</p>
+    <div className="text-lg md:text-2xl text-yellow-500 flex justify-center">
       <p className="mr-2">I'm a</p>
       <Typewriter
         options={{
@@ -75,7 +75,7 @@ const SoundBtn = () => {
   };
 
   return (
-    <div className="flex w-full h-full justify-center md:justify-end mt-40 md:mt-5 md:mr-10">
+    <div className="flex w-full h-screen justify-center md:justify-end translate-y-20 md:translate-y-5 md:-translate-x-5 z-10">
       <div className={`bg-slate-600 text-slate-50 opacity-80 z-10 rounded-lg max-h-20 w-auto py-4 px-10 md:p-4 grid place-content-center 
         ${isPlaying ? "" : "animate-pulse"}
       `}>
@@ -102,7 +102,7 @@ const SocialLinksList = ({ icons }) => (
 
 const ScrollDownLink = () => (
   <NavLink to='/About'>
-    <span title="Scroll down" className="material-symbols-outlined text-white text-3xl cursor-pointer mt-40 mb-7 animate-bounce">
+    <span title="Scroll down" className="material-symbols-outlined text-white text-3xl cursor-pointer mt-20 md:mt-40 mb-7 animate-bounce">
       expand_circle_down
     </span>
   </NavLink>

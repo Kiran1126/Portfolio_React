@@ -15,6 +15,7 @@ import MySQL from "../../assets/Testimonial/Mysql.png";
 import mongoDB from "../../assets/Testimonial/mongoDB.png";
 import JAVA from "../../assets/Testimonial/java.png";
 import GitHub from "../../assets/Testimonial/github.png";
+import ScrollAnimation from "react-animate-on-scroll";
 
 // Array of objects for the client details of the testimonial section
 const clientArr = [
@@ -95,7 +96,7 @@ const settings = {
 
 function Testimonial () {
   return (
-    <section className="w-screen md:w-[80%] h-screen px-10 md:px-0 bg-custom-dark md:float-right overflow-x-hidden flex flex-col justify-evenly">
+    <section className="w-screen md:w-[80%] h-screen px-10 md:px-0 bg-custom-dark md:float-right overflow-hidden flex flex-col justify-evenly">
       <Heading faded="Testimonial" bold="What Others Say" theme="text-white" borderColor="border-orange-500"/>
       <Slider {...settings} customPaging={() => (
         <div className="mt-5 w-2 h-2 bg-white rounded-full hover:bg-orange-500"></div>
@@ -115,13 +116,15 @@ function Testimonial () {
           ))
         }
       </Slider>
-      <div className="grid grid-cols-5 place-items-center gap-3 md:gap-5 my-5 md:my-10 md:px-20 max-[768px]:grid-cols-2 aspect-ratio: 1 / 1">
-        {
-          techArr.map((temp, index) => (
-            <img key={index} className="w-14 h-14 opacity-40" src={temp.img} alt={temp.alt} />
-          ))
-        }
-      </div>
+      <ScrollAnimation animateIn="fadeIn" animateOnce>
+        <div className="grid grid-cols-5 place-items-center gap-5 my-10 md:px-20 aspect-ratio: 1 / 1">
+          {
+            techArr.map((temp, index) => (
+              <img key={index} className="h-10 md:h-14 w-auto opacity-40" src={temp.img} alt={temp.alt} />
+            ))
+          }
+        </div>
+      </ScrollAnimation>
     </section>
   );
 };

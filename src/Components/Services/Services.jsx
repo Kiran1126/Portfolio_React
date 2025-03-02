@@ -37,16 +37,16 @@ function Services () {
           {
             containerArr.map((temp, index) => (
               <TextContainer key={index} background={temp.theme} width="max-w-80" animation="transition duration-500 hover:-translate-y-6 delay-100">
-                <img className="max-h-20 max-w-20" src={temp.image} alt="icon" />
-                <h1 className={`${temp.txtColor} text-lg md:text-xl font-bold`}>{temp.heading}</h1>
-                <p className={`${temp.txtColor} text-center`}>{temp.text}</p>
+                <img className="max-h-14 md:max-h-20 w-auto" src={temp.image} alt="icon" />
+                <h1 className={`${temp.txtColor} text-base md:text-xl font-bold`}>{temp.heading}</h1>
+                <p className={`${temp.txtColor} text-sm md:text-base text-center`}>{temp.text}</p>
               </TextContainer>
             ))
           }
         </div>
       </ScrollAnimation>
       <ScrollAnimation animateIn="fadeInUp" animateOnce>
-        <p className="text-center text-slate-50 text-lg md:text-xl font-semibold px-4 md:px-0">Looking for a custom job? 
+        <p className="text-center text-slate-50 text-base md:text-xl font-semibold px-7 md:px-0">Looking for a custom job? 
           <span className="cursor-pointer m-2 text-orange-500 hover:underline" onClick={() => {
             window.location.href="/Contact"
           }}>
