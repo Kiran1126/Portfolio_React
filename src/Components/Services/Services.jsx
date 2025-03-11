@@ -3,26 +3,43 @@ import TextContainer from "../Container/TextContainer";
 import CompetitiveCoding from "../../assets/Services/CompetitiveCoding.png"
 import Web from "../../assets/Services/html.jpg"
 import ScrollAnimation from "react-animate-on-scroll";
+import { NavLink } from "react-router-dom";
 
 const containerArr = [
   {
     image: "https://bolby-react.vercel.app/images/service-2.svg",
     heading: "DSA",
-    text: "Lorem ipsum dolor sit amet consectetuer adipiscing elit aenean commodo ligula eget.",
+    text: "Unlock the power of algorithms and data structures to excel in problem-solving and competitive coding.",
     theme: "bg-yellow-500",
     txtColor: "text-black"
   },
   {
     image: CompetitiveCoding,
     heading: "Competitive Programming",
-    text: "Lorem ipsum dolor sit amet consectetuer adipiscing elit aenean commodo ligula eget.",
+    text: (
+      <>
+        Put your algorithmic skills to the test. Check out my{" "}
+        <NavLink to="https://leetcode.com/u/Kiran__7/" className="text-orange-300 italic">
+          LeetCode
+        </NavLink>{" "}
+        profile for challenges and solutions.
+      </>
+    ),
     theme: "bg-blue-500",
     txtColor: "text-white"
   },
   {
     image: Web,
     heading: "Web Development",
-    text: "Lorem ipsum dolor sit amet consectetuer adipiscing elit aenean commodo ligula eget.",
+    text: (
+      <>
+        See my love for crafting engaging digital experiences. Check out my{" "}
+        <NavLink to="https://github.com/Kiran1126" className="text-blue-600 italic">
+          GitHub
+        </NavLink>{" "}
+        for inspiration.
+      </>
+    ),
     theme: "bg-slate-50",
     txtColor: "text-black"
   }
