@@ -38,7 +38,7 @@ const Circles = () => (
 );
 
 const BannerImage = () => (
-  <img src="https://bolby-react.vercel.app/images/avatar-1.svg" alt="banner-photo" />
+  <img className="z-10" src="https://bolby-react.vercel.app/images/avatar-1.svg" alt="banner-photo" />
 );
 
 const BannerText = () => (
