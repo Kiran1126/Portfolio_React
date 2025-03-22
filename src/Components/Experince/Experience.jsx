@@ -1,7 +1,7 @@
 import Heading from "../Heading/Heading";
 import ExperienceContainer from "../Container/ExperienceContainer";
 import ScrollAnimation from "react-animate-on-scroll";
-import Sound from '../../assets/Music/HoverSound.mp3'
+import Sound from '../../assets/Music/MouseClick.mp3'
 import useSound from "use-sound";
 
 // Array of objects for education details

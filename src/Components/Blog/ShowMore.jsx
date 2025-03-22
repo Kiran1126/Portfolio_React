@@ -1,9 +1,14 @@
 import { NavLink } from "react-router-dom";
+import useSound from "use-sound";
+import Click from "../../assets/Music/SocialSound.mp3"
 
 const ShowMore = ({img, title, label, icon, url}) => {
+
+  const [play, { stop }] = useSound(Click);
+
   return (
-    <li className="list-none mt-5 md:mt-0">
-      <div className="max-w-72 max-h-72 shadow-xl rounded-lg group transition ease-in-out duration-700 hover:bg-purple-400 text-white font-semibold text-center overflow-hidden" key={title}>
+    <li className="list-none mt-5 md:mt-0"  onMouseEnter={() => play()} onMouseLeave={() => stop()}>
+      <div className="max-w-72 max-h-72 shadow-xl rounded-lg group transition ease-in-out duration-700 hover:bg-purple-400 text-white font-semibold text-center cursor-not-allowed overflow-hidden" key={title}>
         <p className="absolute opacity-0 p-2 translate-x-6 bg-red-500 rounded-b-lg transform duration-500 -translate-y-5 group-hover:opacity-100 group-hover:translate-y-0">
           {label}
         </p>
