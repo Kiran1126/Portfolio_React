@@ -95,8 +95,8 @@ function Blog() {
           </ul>
         </div>
       </ScrollAnimation>
-      <ScrollAnimation animateIn="fadeIn" animateOnce>
-        <div className="flex justify-center mt-7 md:mt-0">
+      <ScrollAnimation animateIn="fadeIn" duration={2} animateOnce>
+        <div className="flex justify-center mb-7 md:mt-0">
           <BtnContainer onClick={() => setShowMore(!showMore)}>
             {showMore ? "Show Less" : "Show More"}
           </BtnContainer>

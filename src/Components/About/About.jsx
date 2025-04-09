@@ -114,7 +114,7 @@ const ProgressSection = () => (
 );
 
 const ExperienceSection = () => (
-  <ScrollAnimation animateIn="fadeIn" delay={100} animateOnce>
+  <ScrollAnimation animateIn="fadeInUp" animateOnce>
     <section className="grid grid-flow-row grid-cols-2 md:grid-cols-4 place-items-start md:place-items-center px-5 md:px-16">
       {
         experienceArr.map((temp, index) => (
