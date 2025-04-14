@@ -97,7 +97,16 @@ const ProgressSection = () => (
         <React.Fragment key={index}>
           <div className="flex justify-between font-sans">
             <label className="text-sm md:text-base font-mono font-bold opacity-75">{temp.domain}</label>
-            <label className="text-sm md:text-base font-mono font-bold opacity-75">{temp.progress}</label>
+            <label className="text-sm md:text-base font-mono font-bold opacity-75">
+              <CountUp 
+                enableScrollSpy={true}
+                scrollSpyDelay={1000}
+                scrollSpyOnce
+                start={0}
+                end={parseInt(temp.progress, 10)}
+                duration={3}
+              />%
+            </label>
           </div>
           <span className={`${temp.spanColor} ${temp.width} h-1 rounded-lg`} />
         </React.Fragment>
@@ -114,7 +123,7 @@ const ProgressSection = () => (
 );
 
 const ExperienceSection = () => (
-  <ScrollAnimation offset={100} animateIn="fadeInUp" animateOnce>
+  <ScrollAnimation offset={100} animateIn="bounceInRight" animateOut="bounceOutLeft">
     <section className="grid grid-flow-row grid-cols-2 md:grid-cols-4 place-items-start md:place-items-center px-5 md:px-16">
       {
         experienceArr.map((temp, index) => (
