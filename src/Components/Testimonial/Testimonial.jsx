@@ -100,19 +100,19 @@ const settings = {
 
 function Testimonial () {
   return (
-    <section className="w-screen md:w-[80%] h-screen mt-7 md:mt-0 px-10 md:px-0 bg-custom-dark md:float-right overflow-x-hidden flex flex-col justify-evenly">
+    <section className="w-screen md:w-[80%] h-screen mt-7 md:mt-0 px-5 md:px-0 bg-custom-dark md:float-right overflow-x-hidden flex flex-col justify-evenly">
       <Heading faded="Testimonial" bold="What Others Say" theme="text-white" borderColor="border-orange-500"/>
       <ScrollAnimation animateIn="bounceInLeft" animateOnce> 
         <Marquee>
           {
             clientArr.map((temp, index) => (
-              <TextContainer key={index} background="bg-slate-600" width="max-w-96" height="max-h-96" animation="mx-5">
-                <TextContainer background="bg-transparent" width="max-w-72" height="max-h-56">
+              <TextContainer key={index} background="bg-slate-600" width="w-80 md:max-w-96" height="max-h-96" animation="mx-5">
+                <TextContainer background="bg-transparent" width="w-60 md:max-w-72" height="max-h-54">
                   <img className="w-24 h-24 md:max-h-28 md:max-w-28" src={temp.img} alt="client" />
                   <p className="text-slate-50 font-semibold text-xl">{temp.client}</p>
                   <p className="text-slate-50 opacity-70 text-sm md:text-base">{temp.Prof}</p>
                 </TextContainer>
-                <TextContainer background="bg-white" width="max-w-80">
+                <TextContainer background="bg-white" width="w-72 md:max-w-80">
                   <p className="text-black text-sm md:text-base">{temp.comment}</p>
                 </TextContainer>
               </TextContainer>

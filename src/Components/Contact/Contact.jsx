@@ -5,10 +5,10 @@ import ScrollAnimation from 'react-animate-on-scroll';
 import Copyright from '../Branding/Copyright';
 
 const Contact = () => (
-  <section className="bg-custom-dark h-auto md:h-screen w-screen md:w-4/5 md:float-right flex flex-col justify-center md:justify-evenly items-center overflow-hidden py-7 md:p-0">
+  <section className="bg-custom-dark h-[785px] md:h-screen pb-2 w-screen md:w-4/5 md:float-right flex flex-col justify-end md:justify-evenly items-center overflow-hidden">
     <Heading faded="Contact" bold="Get In Touch" theme="text-white" borderColor="border-orange-500" />
     <ScrollAnimation animateIn="fadeInUp" animateOnce>
-      <ul className='flex flex-col items-center md:items-stretch md:flex-row gap-y-10 md:gap-x-40'>
+      <ul className='flex flex-col items-center md:items-stretch md:flex-row gap-y-5 md:gap-x-40'>
         <li>
           <Comment />         
         </li>
@@ -24,7 +24,7 @@ const Contact = () => (
 );
 
 const Comment = () => (
-  <div className="flex flex-col text-slate-50 mt-10 text-xl w-full">
+  <div className="flex flex-col text-slate-50 mt-7 md:mt-10 text-xl w-full">
     <p className="text-xl md:text-2xl font-bold text-center md:text-left">Let's talk about everything!</p>
     <div className="flex flex-wrap justify-center">
       <p className='text-base md:text-2xl'>

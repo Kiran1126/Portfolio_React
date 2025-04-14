@@ -47,9 +47,9 @@ const containerArr = [
 
 function Services () {
   return (
-    <section className="w-screen md:w-4/5 h-screen bg-custom-dark md:float-right flex flex-col justify-evenly">
+    <section className="w-screen md:w-4/5 h-[900px] md:h-screen bg-custom-dark md:float-right flex flex-col justify-evenly">
       <Heading faded="services" bold="What I Do" theme="text-white" borderColor="border-orange-500"/>
-      <ScrollAnimation animateIn="fadeIn" duration={2} animateOnce>
+      <ScrollAnimation offset={50} animateIn="fadeIn" animateOnce>
         <div className="flex flex-col gap-3 md:gap-0 items-center md:items-stretch md:flex-row justify-center md:justify-evenly px-10 flex-wrap">
           {
             containerArr.map((temp, index) => (
@@ -62,7 +62,7 @@ function Services () {
           }
         </div>
       </ScrollAnimation>
-      <ScrollAnimation animateIn="fadeInUp" animateOnce>
+      <ScrollAnimation offset={100} animateIn="fadeInUp" animateOnce>
         <p className="text-center text-slate-50 text-base md:text-xl font-semibold px-7 md:px-0">Looking for a custom job? 
           <span className="cursor-pointer m-2 text-orange-500 hover:underline" onClick={() => {
             window.location.href="/Contact"

@@ -43,63 +43,58 @@ const experienceArr = [
 ];
 
 const Experience = () => {
-
-  const [play, { stop }] = useSound(Sound);
-
   return (
-    <section className="h-auto md:h-screen py-7 md:py-0 w-screen md:w-4/5 md:float-right flex flex-col justify-evenly">
+    <section className="h-[1020px] md:h-screen w-screen md:w-4/5 md:float-right flex flex-col justify-center md:justify-evenly gap-4 md:gap-0">
       <Heading faded="experience" bold="Summary" theme="text-black" borderColor="border-blue-500"/>
-      <ScrollAnimation animateIn="fadeIn" duration={2} animateOnce>
-        <div className="flex flex-col md:flex-row justify-center text-custom-dark">
-          <ExperienceContainer>
-            {
-              academicsArr.map((temp, index) => (
-                <div key={index} className="flex gap-3 md:gap-5 p-2 md:p-5 group-hover:opacity-20 transition duration-300 hover:!opacity-100 hover:!scale-110" 
-                  onMouseEnter={() => play()}
-                  onMouseLeave={() => stop()}
-                >
-                  <span className="material-symbols-outlined text-red-400 text-xl md:text-3xl">
-                    school
-                  </span>
-                  <div>
-                    <p className="opacity-50 text-lg md:text-xl uppercase">{temp.time}</p>
-                    <p className="text-lg md:text-2xl font-semibold font-sans py-2">{temp.degree}</p>
-                    <p className="text-base md:text-xl font-normal opacity-85">{temp.institute}</p>
-                  </div>
-                </div>
-              ))
-            }
-          </ExperienceContainer>
-          <ExperienceContainer>
-            {
-              experienceArr.map((temp, index) => (
-                <div key={index} className="flex gap-3 md:gap-5 p-2 md:p-5 group-hover:opacity-20 transition duration-300 hover:!opacity-100 hover:!scale-110" 
-                  onMouseEnter={() => play()}
-                  onMouseLeave={() => stop()}
-                >
-                  <span className="material-symbols-outlined text-orange-500 text-xl md:text-3xl">
-                    work
-                  </span>
-                  <div>
-                    <p className="text-lg md:text-xl opacity-50 uppercase">{temp.time}</p>
-                    <p className="text-lg md:text-2xl font-semibold font-sans py-2">{temp.domain}</p>
-                    <p className="text-base md:text-xl font-normal opacity-85">{temp.company}</p>
-                  </div>
-                </div>
-            ))}
-          </ExperienceContainer>
-        </div>
-      </ScrollAnimation>
-      <ScrollAnimation animateIn="fadeInUp" animateOnce>
-        <p className="text-center text-custom-dark text-base md:text-xl font-semibold px-7 md:px-0">Want to connect with me? 
-          <span className="cursor-pointer m-2 text-orange-500 hover:underline" onClick={() => {
-            window.open("https://www.linkedin.com/in/kiran-samanta-732604258/", "_blank");
-          }}>
-          Click here</span> 
-        for my LinkedIn profile. ✌️</p>
-      </ScrollAnimation>
+      <ExpSection />
+      <LinkSection />
     </section>
   );
 };
+
+const ExpSection = () => { 
+
+  const [play, { stop }] = useSound(Sound);
+
+  const render = (data, iconColor, iconType) => 
+    data.map((temp, index) => (
+      <div key={index} className="flex gap-3 md:gap-5 p-2 md:p-5 group-hover:opacity-20 transition duration-300 hover:!opacity-100 hover:!scale-110" 
+        onMouseEnter={() => play()}
+        onMouseLeave={() => stop()}
+      >
+        <span className={`material-symbols-outlined ${iconColor} text-xl md:text-3xl`}>
+          {iconType}
+        </span>
+        <div>
+          <p className="opacity-50 text-lg md:text-xl uppercase">{temp.time}</p>
+          <p className="text-lg md:text-2xl font-semibold font-sans py-2">{temp.degree || temp.domain}</p>
+          <p className="text-base md:text-xl font-normal opacity-85">{temp.institute || temp.company}</p>
+        </div>
+      </div>
+    ));
+  return(
+    <ScrollAnimation animateIn="fadeIn" duration={2} animateOnce>
+      <div className="flex flex-col md:flex-row justify-center text-custom-dark">
+        <ExperienceContainer>
+          {render(academicsArr, "text-red-400", "school")}
+        </ExperienceContainer>
+        <ExperienceContainer>
+          {render(experienceArr, "text-orange-400", "work")}
+        </ExperienceContainer>
+      </div>
+    </ScrollAnimation>
+  )
+};
+
+const LinkSection = () => (
+  <ScrollAnimation offset={50} animateIn="fadeInUp" animateOnce>
+    <p className="text-center text-custom-dark text-base md:text-xl font-semibold px-7 md:px-0">Want to connect with me? 
+      <span className="cursor-pointer m-2 text-orange-500 hover:underline" onClick={() => {
+        window.open("https://www.linkedin.com/in/kiran-samanta-732604258/", "_blank");
+      }}>
+      Click here</span> 
+    for my LinkedIn profile. ✌️</p>
+  </ScrollAnimation>
+);
 
 export default Experience;

@@ -52,7 +52,7 @@ const progressArr = [
 ];
 
 const About = () => (
-  <div className="bg-white h-screen w-screen md:w-4/5 float-right flex flex-col justify-evenly">
+  <div className="bg-white h-screen w-screen md:w-4/5 my-7 md:m-0 float-right flex flex-col justify-evenly">
     <Heading faded="About Me" bold="Know Me More" theme="text-black" borderColor="border-blue-500" />
     <AboutSection />
     <ExperienceSection />
@@ -114,7 +114,7 @@ const ProgressSection = () => (
 );
 
 const ExperienceSection = () => (
-  <ScrollAnimation animateIn="fadeInUp" animateOnce>
+  <ScrollAnimation offset={100} animateIn="fadeInUp" animateOnce>
     <section className="grid grid-flow-row grid-cols-2 md:grid-cols-4 place-items-start md:place-items-center px-5 md:px-16">
       {
         experienceArr.map((temp, index) => (
