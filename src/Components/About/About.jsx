@@ -123,7 +123,9 @@ const ExperienceSection = () => (
             <div className="block">
               <p className="text-xl md:text-4xl text-custom-dark font-bold">
                 <CountUp 
-                  delay={3}
+                  enableScrollSpy={true}
+                  scrollSpyDelay={1000}
+                  scrollSpyOnce
                   start={0}
                   duration={3}
                   end={parseInt(temp.number, 10)}
