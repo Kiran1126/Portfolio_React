@@ -14,9 +14,7 @@ const Banner = ({ icons }) => {
       <BannerImage />
       <BannerText />
       <SocialLinksList icons={icons} />
-      <BtnContainer>
-        <button type="button">Hire Me</button>
-      </BtnContainer>
+      <HireMe />
       <ScrollDownLink />
     </div>
   );
@@ -98,6 +96,16 @@ const SocialLinksList = ({ icons }) => (
       ))
     }
   </ul>
+);
+
+const HireMe = () => (
+  <BtnContainer>
+    <NavLink to='/Contact'>
+      <span>
+          Hire Me
+      </span>
+    </NavLink>
+  </BtnContainer>
 );
 
 const ScrollDownLink = () => (

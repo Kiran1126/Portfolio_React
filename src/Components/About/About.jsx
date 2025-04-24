@@ -81,10 +81,10 @@ const AboutText = () => (
   <div className="flex flex-col items-start w-full md:w-2/4 gap-7">
     <p className="text-sm md:text-base font-medium font-sans opacity-70">I’m Kiran Samanta, a passionate and tech-driven student dedicated to transforming innovative ideas into reality.</p>
     <div className="hidden md:block">
-      <BtnContainer>
-        <button type="button" formTarget="_blank" onClick={() => window.open(Resume, '_blank', 'noopener,noreferrer')}>
+      <BtnContainer onClick={() => window.open(Resume, '_blank', 'noopener,noreferrer')}>
+        <span>
           Download CV
-        </button>
+        </span>
       </BtnContainer>
     </div>
   </div>
