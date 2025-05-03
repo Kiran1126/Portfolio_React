@@ -33,13 +33,13 @@ const clientArr = [
     img: "https://bolby-react.vercel.app/images/avatar-3.svg",
     client: "John Doe",
     Prof: "Business Owner",
-    comment: "I enjoy working with the theme and learn so much. Good luck!",
+    comment: "I enjoy working with you and learn so much.",
   },
   {
     img: "https://bolby-react.vercel.app/images/avatar-2.svg",
     client: "Smith Johnson",
     Prof: "Business Analyst",
-    comment: "I'll definitely recommend you to others. You're really a good developer. ✌️",
+    comment: "I'll definitely recommend you to others. You're a great developer!!",
   }
 ];
 

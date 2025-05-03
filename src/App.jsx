@@ -144,7 +144,10 @@ function App() {
           <Route 
             path="*" 
             element={
-              <h1 className="text-center text-black">404 - Page Not Found</h1>
+              <div className="h-screen w-screen md:w-4/5 md:float-right grid place-content-center place-items-center">
+                <h1 className="text-center text-black">404 - Page Not Found</h1>
+                <h3 className="text-orange-500">Work In Progress...</h3>
+              </div>
             } 
           />
         </Routes>
