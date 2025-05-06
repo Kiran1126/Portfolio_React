@@ -8,7 +8,7 @@ import TapSound from '../../assets/Music/TapMusic.mp3';
 const Brand = () => (
   <div className='flex md:items-baseline'>
     <h1 className='text-white text-3xl md:text-5xl font-semibold md:font-bold'>Kiran</h1>
-    <p className='text-red-600 text-3xl md:text-9xl'>.</p>
+    <p className='text-red-600 text-3xl md:text-7xl'>.</p>
   </div>
 );
 
@@ -21,7 +21,7 @@ const Sidebar = ({ links }) => {
 
   return (
     <>
-      <section className="hidden bg-custom-dark h-screen md:w-1/5 md:grid place-items-center border-gray-500 sm:border-r fixed z-10 float-left">
+      <section className="hidden bg-custom-dark h-screen md:w-1/5 md:grid place-items-center place-content-evenly border-gray-500 sm:border-r fixed z-10 float-left">
         <Brand />
         <img className='h-52 w-52 cursor-pointer' src={ProfilePhoto} alt="profile-photo" />
         <ul className='flex flex-col justify-center'>
