@@ -19,7 +19,7 @@ const blogArr = [
   },
   {
     img: BlogArtwork_2,
-    title: "Creating my own portfolio",
+    title: "Creating my first portfolio",
     label: "Video",
     icon: "videocam",
     url: "https://www.linkedin.com/posts/kiran-samanta-732604258_connections-internship-oasisinfobyte-activity-7097236183641993216-27Ah?utm_source=share&utm_medium=member_desktop&rcm=ACoAAD9zJxYBcvJsjbDrPjLK6zkWXJJumiY42qo",
@@ -27,10 +27,10 @@ const blogArr = [
   },
   {
     img: BlogArtwork_3,
-    title: "My first internship experience",
+    title: "Creating my latest website",
     label: "Blog",
     icon: "link",
-    url: "#",
+    url: "https://medium.com/@kiransamanta945/building-my-own-react-js-based-portfolio-website-3c416f73e95e",
     category: "initial"
   },
   // Additional part starts here
