@@ -78,7 +78,7 @@ function Blog() {
       ));
 
   return (
-    <section className="w-screen md:w-[80%] h-auto md:h-screen py-16 md:p-0 bg-white md:float-right flex flex-col justify-around overflow-hidden">
+    <section className="w-screen md:w-[80%] h-auto md:h-[870px] py-16 md:py-0 bg-white md:float-right flex flex-col justify-around overflow-hidden">
       <Heading faded="Blogs" bold="What I Write" theme="text-black" borderColor="border-blue-500"/>
       <ScrollAnimation animateIn="fadeInUp" animateOnce>
         <div className="flex flex-col gap-0 md:gap-5">

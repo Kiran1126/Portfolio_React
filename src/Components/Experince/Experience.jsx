@@ -44,7 +44,7 @@ const experienceArr = [
 
 const Experience = () => {
   return (
-    <section className="h-[1020px] md:h-screen w-screen md:w-4/5 md:float-right flex flex-col justify-center md:justify-evenly gap-4 md:gap-0">
+    <section className="h-[1020px] md:h-[980px] w-screen md:w-4/5 md:float-right flex flex-col justify-center md:justify-evenly gap-4 md:gap-0">
       <Heading faded="experience" bold="Summary" theme="text-black" borderColor="border-blue-500"/>
       <ExpSection />
       <LinkSection />
